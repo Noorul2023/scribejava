@@ -38,7 +38,7 @@ public class FacebookService extends OAuth20Service {
                 appsecretProof.format("%02x", b);
             }
 
-            request.addParameter("appsecret_proof", appsecretProof.toString());
+            request.addQuerystringParameter("appsecret_proof", appsecretProof.toString());
         } catch (NoSuchAlgorithmException | InvalidKeyException e) {
             throw new IllegalStateException("There is a problem while generating Facebook appsecret_proof.", e);
         }
